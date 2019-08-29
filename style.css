@@ -32,3 +32,34 @@ p{
     text-align: left;
     color: black;
 }
+#top {
+    background-color: #ccc;
+    padding: 20px
+}
+.intro {
+    color: red;
+    font-weight: bold;
+}
+.thisOtherClass, .yetAnotherClass {
+    color: red;
+}
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+a:active {
+    color: red;
+}
+
+a:hover {
+    text-decoration: none;
+    color: blue;
+    background-color: yellow;
+}
+
+input:focus, textarea:focus {
+    background: #eee;
+}
