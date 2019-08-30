@@ -47,13 +47,16 @@ a:hover {/* ссылки при наведении курсором */
 div#header { /* шапка сайта*/
     width:100%;
     height: 200px;
-    }
+}
 div#header a.logo { /* логотип можно записать просто как .logo*/
     background: url("../images/logo.jpg") no-repeat;
     height: 37px;
     float: left; /*обтекание: слева*/
-    width:310px;
+    width: 310px;
     margin: 30px;
+}
+#header h1 {
+    visibility: hidden;
 }
 ul.menu { /* маркированный список - меню в шапке */
     list-style: none; /*стиль для списка: нет (убираем квадратики, круглики)*/
@@ -62,7 +65,7 @@ ul.menu { /* маркированный список - меню в шапке */
 }
 ul.menu li { /*элемент маркированного списка*/
     float: left;
-    width:auto;
+    width: auto;
 }
 ul.menu li a {/* ссылки маркированного списка */
     padding: 10px 20px;
@@ -78,8 +81,8 @@ ul.menu li a:hover { /*псевдокласс hover - при на ведении
 .text {/* блок с текстом в шапке */
     float: left;
     width: auto;
-    border-top:1px #eee solid;/* рамка сверху */
-    border-bottom:1px #eee solid;/* рамка снизу */
+    border-top: 1px #eee solid;/* рамка сверху */
+    border-bottom: 1px #eee solid;/* рамка снизу */
     padding: 20px 0px;
     margin: 0px 30px;
 }    
