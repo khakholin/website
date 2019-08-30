@@ -1,0 +1,215 @@
+* { /* reset - сброс */
+    margin: 0; /* удаляем отступы внешние*/
+    padding: 0; /* удаляем отступы внутренние*/
+    border:0 none; /* удаляем рамки*/
+}
+body {
+    font: 12px/18px Arial, Tahoma, Verdana, sans-serif; /* стиль шрифта-универсальный: 
+    размер/межстрочное расстояние и стиль семейства по приоритетности - обязательные 
+    свойства*/
+    width: 100%; /* ширина тела - на всю ширину*/
+    height: 100%;/* высота тела - на всю высоту*/
+    background:#fff; /*фон белый - можно и не писать, но лучше перестраховаться*/
+}
+   
+p { /*стиль абзаца*/
+    color:#b8b8b8; /* цвет текста в абзацах*/
+    margin: 0 0 10px 0; /*внешний отступ: сверху справа снизу слева (по часовой стелке,
+    обычно задается только снизу)*/
+    line-height: 2em; /* межстрочный интервал */
+    font-size: 15px ;/* размер шрифта  */
+}
+a { /* ссылки */
+    color:#8c6641;
+    font-weight: bold; /* жирность букв: полужирный */
+    text-decoration: none; /* подчеркивание: нет */
+    outline: none; /*точечная рамка вокруг ссылок при нажатии: нет*/
+}
+a:hover {/* ссылки при наведении курсором */
+    color: black;
+}        
+#wrap { /* оболочка сайта, куда мы все помещаем */
+    margin: 20px auto; /* внешний отступ: сверху/снизу справа/слева; auto устанавливает 
+    блок по центру*/
+    background: url("../images/bg.jpg") repeat-x #fff; /*Фон: ссылка на картинку 
+    повторение по горизонтали цвет белый(т.к. картинка у нас не везде, где ее нет - 
+    белый цвет)*/
+    width: 947px; /* ширина оболочки (сайта)*/
+    position: relative;/* позиция: относительно исходного места */
+    min-height: 100%; /*мнимальная высота: на высоту экрана (в ie 6 не работает)*/
+    border: 8px solid #ccc; /*рамка: ширина в пикселях сплошная(solid) #цвет*/
+    border-radius: 7px; /* закругления - общее*/
+    -webkit-border-radius: 7px; /*для  Chrome и Safari */
+    -moz-border-radius: 7px;/*для  ff */
+    -khtml-border-radius:7px; /*для Konqueror*/
+}
+/*********** шапка сайта *************/
+div#header { /* шапка сайта*/
+    width:100%;
+    height: 200px;
+    }
+div#header a.logo { /* логотип можно записать просто как .logo*/
+    background: url("../images/logo.jpg") no-repeat;
+    height: 37px;
+    float: left; /*обтекание: слева*/
+    width:310px;
+    margin: 30px;
+}
+ul.menu { /* маркированный список - меню в шапке */
+    list-style: none; /*стиль для списка: нет (убираем квадратики, круглики)*/
+    padding: 20px 30px 0 0;/*внутренний отступ: сверху справа снизу слева*/
+    float: right; /*обтекание: справа*/
+}
+ul.menu li { /*элемент маркированного списка*/
+    float: left;
+    width:auto;
+}
+ul.menu li a {/* ссылки маркированного списка */
+    padding: 10px 20px;
+    text-decoration: none;
+    color:#b8b8b8;
+    font-weight: normal;
+    font-size: 14px;
+}
+ul.menu li a:hover { /*псевдокласс hover - при на ведении курсора на ссылку ненумерованного 
+    списка*/
+    color:#8a6540;
+}
+.text {/* блок с текстом в шапке */
+    float: left;
+    width: auto;
+    border-top:1px #eee solid;/* рамка сверху */
+    border-bottom:1px #eee solid;/* рамка снизу */
+    padding: 20px 0px;
+    margin: 0px 30px;
+}    
+/*********** центр сайта *************/
+div#middle {/* центарльный блок*/
+    width: 100%;
+    padding: 0 0 85px;
+    position: relative;
+}
+#middle:after {/*отступ для центрального блока - уберите его и помотрите результат, 
+    думаю станет ясно для чего он нужен*/
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+div.content {/* центральный блок с текстом*/
+    float: left;
+    padding: 20px 0 10px 10px;
+    width: 634px;/*зададим ширину чтоб не скакало ничего*/
+}
+.block {/* блок с картинкой и текстом*/
+    float:left; /*обтекание слева*/
+    margin-left: 15px;
+    width: 300px;/* ширина в 300px чтоб вместилось 2 блока*/
+}
+.block img {/* стиль для картинке в блоке */
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-left: 5px;
+}
+.block h2 { /* свой стиль заголовка, перекрывает глобальные настройки*/
+    color:#939393;
+    font-size:16px;
+    padding: 5px;
+}
+button, .button { /* стиль для зеленых кнопок*/
+    float:right;
+    width:96px;
+    height: 26px;
+    padding-top: 6px; /* стиль для зеленых кнопок*/
+    text-align: center; /* выравнивание текста: по центру*/
+    color:#fff;
+    margin-right: 10px;
+    background:url("../images/button.png") no-repeat;
+}    
+/******* sidebar *******/
+div.sidebar {/* стиль для сайдбара */
+    float: right;
+    padding: 20px 10px 10px 0;
+    width: 290px;
+    color:#939393;
+}
+.twitter {/* блок для твиттов */
+    background:url("../images/twitter.png") no-repeat ;
+    height:150px;
+    width:257px;
+}
+.twitter p { /* текст твиттов*/
+    width:225px; /*ширина фиксированная чтобы текст не выходил за рамки*/
+    padding: 10px;
+    font-size: 12px;
+}
+.twitter span {
+    padding: 5px;
+    float: right;
+    width:100%;
+    text-align: right;
+}     
+ul.navigation {/* меню сайдбара - маркивованный список*/
+    list-style:none;
+    padding:5px;
+}
+div#sidebar  h3 {/* стиль для заголовка h3*/
+    color:#404040;
+    font-weight: normal;
+    padding: 10px 5px;
+}
+ul.navigation li {
+    width:257px;    height:30px;
+    margin-bottom: -1px;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #ccc;
+}
+ul.navigation li:hover {/* меняем цвет элемента маркированного списка при на ведении курсора*/
+    background: #f9f9f9;
+}
+ul.navigation li a {
+    text-decoration: none;
+    padding: 0px 10px;
+    color:#939393;
+    font-size:12px;
+    font-weight: normal;
+}
+ul.navigation li a:hover {/* меняем цвет фона ссылки маркированного списка при на ведении 
+    курсора*/
+    background: #f9f9f9;
+}
+.contacts {/* блок контактов */
+    padding: 5px;
+}
+.contacts p {
+    line-height:1.5em;
+}    
+/******* footer *******/
+div#footer {/* подвал сайта */
+    border-top: 1px solid #CCCCCC;
+    position: absolute; /*позиция блока: абсолютная*/
+    bottom: 0; /*прижимаем footer к нижней части браузера*/
+    height: 85px;
+    margin: 0 30px;
+    width: 875px;
+}
+p.copyright {/* текст копирайта */
+    float: left;
+    width:50%;
+    padding-top: 25px;
+    font-size: 12px;
+}
+.fb, .tw {/* блоки для иконок */
+    float:right;
+    width:200px;
+    padding-top: 10px;
+}
+.fb img, .tw img {
+    float:left;
+    width:40px;
+    padding-right: 5px;
+}
+.fb p, .tw p {
+    padding-top: 10px;
+}    
