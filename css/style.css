@@ -67,7 +67,7 @@ a:hover {/* ссылки при наведении курсором */
     /*-khtml-border-radius:7px; /*для Konqueror*/
     
     border-top: 0px;
-
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 /*********** шапка сайта *************/
 div#header { /* шапка сайта*/
