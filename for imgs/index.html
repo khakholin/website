@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8"/>
+            <link rel="stylesheet" href="/css/styles.css" type="text/css">
+            <title>Порядок изображений</title>
+            <script>
+                function isOne() {
+                    element1 = document.getElementById("one");
+                    element2 = document.getElementById("two");
+                    element3 = document.getElementById("three");
+                    element1.style.zIndex = 2;
+                    element2.style.zIndex = 1;
+                    element3.style.zIndex = 0;
+                    element1.style.border = "1px solid red";
+                    element2.style.border = "1px solid black";
+                    element3.style.border = "1px solid black";
+                }
+                function isTwo() {
+                    element1 = document.getElementById("one");
+                    element2 = document.getElementById("two");
+                    element3 = document.getElementById("three");
+                    element1.style.zIndex = 1;
+                    element2.style.zIndex = 2;
+                    element3.style.zIndex = 0;
+                    element1.style.border = "1px solid black";
+                    element2.style.border = "1px solid red";
+                    element3.style.border = "1px solid black";
+                }
+                function isThree() {
+                    element1 = document.getElementById("one");
+                    element2 = document.getElementById("two");
+                    element3 = document.getElementById("three");
+                    element1.style.zIndex = 1;
+                    element2.style.zIndex = 0;
+                    element3.style.zIndex = 2;
+                    element1.style.border = "1px solid black";
+                    element2.style.border = "1px solid black";
+                    element3.style.border = "1px solid red";
+                }
+            </script>
+        </head>
+        <body>
+            <div class="card">
+                <img src="1.jpg" alt="1" id="one" onclick="isOne()"/>
+                <img src="2.jpg" alt="2" id="two" onclick="isTwo()"/>
+                <img src="3.jpg" alt="3" id="three" onclick="isThree()"/>
+            </div>
+        </body>
+    </html>

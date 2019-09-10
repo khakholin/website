@@ -1,0 +1,4 @@
+.card IMG { position: relative; }
+#one { top: 50px; left: 55px; z-index: 2; border: 1px solid black;}
+#two { left: -120px; top: 25px; z-index: 1; border: 1px solid black;}
+#three { left: -295px; z-index: 0; border: 1px solid black;}
