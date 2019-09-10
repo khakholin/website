@@ -5,46 +5,106 @@
             <link rel="stylesheet" href="/css/styles.css" type="text/css">
             <title>Порядок изображений</title>
             <script>
+                /* делается активная картинка та, на которую нажали
                 function isOne() {
-                    element1 = document.getElementById("one");
-                    element2 = document.getElementById("two");
-                    element3 = document.getElementById("three");
-                    element1.style.zIndex = 2;
-                    element2.style.zIndex = 1;
-                    element3.style.zIndex = 0;
-                    element1.style.border = "1px solid red";
-                    element2.style.border = "1px solid black";
-                    element3.style.border = "1px solid black";
+                    img1 = document.getElementById("one");
+                    img2 = document.getElementById("two");
+                    img1.style.zIndex = 2;
+                    img2.style.zIndex = 1;
+                    img1.style.border = "1px solid red";
+                    img2.style.border = "1px solid black";
                 }
                 function isTwo() {
-                    element1 = document.getElementById("one");
-                    element2 = document.getElementById("two");
-                    element3 = document.getElementById("three");
-                    element1.style.zIndex = 1;
-                    element2.style.zIndex = 2;
-                    element3.style.zIndex = 0;
-                    element1.style.border = "1px solid black";
-                    element2.style.border = "1px solid red";
-                    element3.style.border = "1px solid black";
-                }
-                function isThree() {
-                    element1 = document.getElementById("one");
-                    element2 = document.getElementById("two");
-                    element3 = document.getElementById("three");
-                    element1.style.zIndex = 1;
-                    element2.style.zIndex = 0;
-                    element3.style.zIndex = 2;
-                    element1.style.border = "1px solid black";
-                    element2.style.border = "1px solid black";
-                    element3.style.border = "1px solid red";
+                    img1 = document.getElementById("one");
+                    img2 = document.getElementById("two");
+                    img1.style.zIndex = 1;
+                    img2.style.zIndex = 2;
+                    img1.style.border = "1px solid black";
+                    img2.style.border = "1px solid red";
+                }*/
+                function isB1() {
+                    img1 = document.getElementById("one");
+                    img2 = document.getElementById("two");
+                    if (img1.style.zIndex>img2.style.zIndex){
+                        img1.style.zIndex = 1;
+                        img2.style.zIndex = 2;
+
+                        img1.style.border = "1px solid black";
+                        img2.style.border = "1px solid red";
+
+                        img2.style.top = "50px";
+                        img1.style.top = "25px";
+
+                        img2.style.left = "-205px";
+                        img1.style.left = "400px";
+                        moove();
+                    }
+                    else{
+                        img1.style.zIndex = 2;
+                        img2.style.zIndex = 1;
+
+                        img2.style.border = "1px solid black";
+                        img1.style.border = "1px solid red";
+
+                        img1.style.top = "50px";
+                        img2.style.top = "25px";
+
+                        img2.style.left = "-3px";
+                        img1.style.left = "198px";
+                    }
                 }
             </script>
+            <style>
+                * { /* reset - сброс */
+                    margin: 0; /* удаляем отступы внешние*/
+                    padding: 0; /* удаляем отступы внутренние*/
+                    border:0 none; /* удаляем рамки*/
+                }
+                body {
+                    font: 12px/18px Arial, Tahoma, Verdana, sans-serif; 
+                    width: 100%; /* ширина тела - на всю ширину*/
+                    height: 100%;/* высота тела - на всю высоту*/
+                    background:rgb(255, 255, 255); /*фон белый - можно и не писать, но лучше перестраховаться*/
+                }
+                .wrapper { 
+                    margin: auto; 
+                    background: rgb(255, 255, 255);
+                    width: 999px; /* ширина оболочки (сайта)*/
+                    position: relative;/* позиция: относительно исходного места */
+                    min-height: 100%; /*мнимальная высота: на высоту экрана (в ie 6 не работает)*/
+                    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+                }
+                div.card {/* центарльный блок*/
+                    width: 100%;
+                    padding: 0 0 85px;
+                    position: relative;
+                }
+                .card:after {
+                    content: '.';
+                    display: block;
+                    clear: both;
+                    visibility: hidden;
+                    height: 0;
+                }
+                .card IMG { position: relative; }
+                #one { top: 50px; left: 198px; z-index: 2; border: 1px solid rgb(255, 255, 255);}
+                #two { top: 25px; left: -3px;z-index: 1; border: 1px solid rgb(255, 255, 255);}
+                #b1 { top: -30px; left: -377px;z-index: 4; opacity: 1;}
+                #b2 { top: -94px; left: 433px;z-index: 3; opacity: 1;}
+                #b1:active{
+                    opacity: 0;
+                }
+  
+            </style>
         </head>
         <body>
-            <div class="card">
-                <img src="1.jpg" alt="1" id="one" onclick="isOne()"/>
-                <img src="2.jpg" alt="2" id="two" onclick="isTwo()"/>
-                <img src="3.jpg" alt="3" id="three" onclick="isThree()"/>
+            <div class="wrapper">
+                <div class="card">
+                    <img src="1.jpg" alt="1" id="one" onclick="isOne()"/>
+                    <img src="2.jpg" alt="2" id="two" onclick="isTwo()"/>
+                    <img src="button1.png" alt="b1" id="b1" onclick="isB1()"/>
+                    <img src="button2.png" alt="b2" id="b2"/>
+                </div>
             </div>
         </body>
     </html>
