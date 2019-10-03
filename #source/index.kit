@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Main page</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Playfair+Display:400,700&subset=latin,cyrillic">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="header">
+                <nav class="container">
+                    <a href="#" class="logo">
+                        <span class="logo__letters">L</span>
+                        <span class="logo__letters">O</span>
+                        <span class="logo__letters">G</span>
+                        <span class="logo__letters">O</span>
+                    </a><!--logo-->
+                    <div class="nav-toggle"></div>
+                    <form action="" method="GET" class="searchform">
+                        <input type="text" placeholder="Искать на сайте...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                    <ul class="menu">
+                        <li class="menu__item">Блог</li>
+                        <li class="menu__item">Портфолио</li>
+                        <li class="menu__item">Об авторе</li>
+                    </ul><!--menu-->
+                </nav><!--container-->
+            </div><!--header-->
+
+            <div class="contant">
+                <div class="posts-list">
+                    <article class="post post-1">
+                        <a href="#" class="post__image">
+                            <img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_slovar_rodnoy_prirodi.jpg">
+                        </a>
+                        <div class="post-content">
+                            <a href="#" class="category">Дизайн</a>
+                            <h2 class="post-content__title">Весна</h2>
+                            <p class="post-content__description">Очень богат русский язык словами, относящимися к временам года и к природным явлениям, с ними связанным.</p>
+                            <div class="post-footer">
+                                <a class="more-link" href="">Продолжить чтение</a>
+                                <div class="post-social">
+                                    <a href="" target="_blank" class="post-social__item"><i class="fa fa-facebook"></i></a>
+                                    <a href="" target="_blank" class="post-social__item"><i class="fa fa-twitter"></i></a>
+                                    <a href="" target="_blank" class="post-social__item"><i class="fa fa-pinterest"></i></a>
+                                </div><!--post-social-->
+                            </div><!--post-footer-->
+                        </div><!--post-content-->
+                    </article>
+                    <article class="post post-2">
+                        ...
+                    </article>
+                </div> <!--posts-list-->
+                <div class="aside">
+                    <div class="widget">
+                        <h3 class="widget__title">Категории</h3>
+                        <ul class="widget-category-list">
+                            <li class="widget-category-list__item"><a href="">Дизайн</a> (2)</li>
+                            <li class="widget-category-list__item><a href="">Вёрстка</a> (5)</li>
+                            <li class="widget-category-list__item><a href="">Видео</a> (1)</li>
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h3 class="widget__title">Последние записи</h3>
+                        <ul class="widget-posts-list">
+                            <li>
+                                <a href="#" class="widget-posts-list__image-small">
+                                    <img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_slovar_rodnoy_prirodi.jpg">
+                                </a>
+                                <h4 class="widget-posts-list__title">Весна</h4>
+                            </li>
+                            <li>
+                                <a href="#" class="widget-posts-list__image-small">
+                                    <img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_Russia.jpg">
+                                </a>
+                              <h4 class="widget-posts-list__title">Лето</h4>
+                            </li>
+                            <li>
+                                <a href="#" class="widget-posts-list__image-small">
+                                    <img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_rodnaya_priroda_osen.jpg">
+                                </a>
+                              <h4 class="widget-posts-list__title">Осень</h4>
+                            </li>
+                        </ul><!--widget-posts-list-->
+                    </div><!--widget-->
+                    <div class="widget">
+                        <h3 class="widget__title">Подписка на рассылку</h3>
+                        <form action="" method="post" class="subscribe">
+                            <input type="email" name="email" placeholder="Ваш email" required>
+                            <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+                        </form>
+                    </div><!--widget-->
+                </div><!--aside-->
+            </div><!--contant-->
+        </div><!--wrap-->
+    </body>
+</html>
