@@ -13,6 +13,7 @@
         justify-content: space-between;
     }
     &-info{
+        @include bold;
         display: flex;
         flex-direction: column;
         justify-content: center;
