@@ -1,0 +1,20 @@
+body{
+    @include light;
+    color: $text-color;
+    height: 2000px;
+}
+img{
+    max-width:100%
+}
+.section{
+    padding: 50px 0 50px 0;
+    &-title{
+        font-size: 30px;
+        @include bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__title{
+        margin-bottom: 50px;
+    }
+}
