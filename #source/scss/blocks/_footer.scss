@@ -1,0 +1,92 @@
+.footer{
+    padding: 40px 10px;
+    background-color: #262626;
+    color: #ffffff;
+    &-block{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-social{
+        &__logo{
+            margin-left: 10px;
+            font-size: 24px;
+        }
+    }
+    &-adaptive{
+        display: none;
+        &__copy{
+            text-align: center;
+            color: #767676;
+        }
+    }
+    &__pay{
+        &-logo{
+            margin: 10px;
+            font-size: 32px;
+        }
+    }
+    a{
+        color: #ffffff;
+    }
+    &__title{
+        margin-bottom: 8px;
+        font-size: 18px;
+        text-transform: uppercase;
+        @include bold;
+    }
+    &__subtitle{
+        display: block;
+        margin-bottom: 48px;
+    }
+    &__copy{
+        color: #767676;
+    }
+    &__contacts{
+        text-align: right;
+    }
+    &__phone{
+        display: block;
+        margin-bottom: 20px;
+        font-size: 20px;
+        @include bold;
+    }
+    &__mail{
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px){
+    .footer{
+        &-block{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        &__contacts{
+            text-align: center;
+        }
+        &__copy{
+            display: none;
+        }
+        &__subtitle{
+            display: block;
+            margin-bottom: 20px;
+        }
+        &__pay{
+            &-logo{
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+        }
+        &-social{
+            &__logo{
+                margin-left: 0;
+                margin: 0 5px 20px 5px;
+            }
+        }
+        &-adaptive{
+            display: block;
+        }
+    }
+}

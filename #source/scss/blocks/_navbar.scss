@@ -1,5 +1,6 @@
 .navbar{
-    width: 100%;
+    padding: 0;
+    border: 0;
     height: 150px;
     background-color: $dark;
     &-wrap{
@@ -35,11 +36,9 @@
     }
 }
 .menu{
-    width: 100%;
     padding: 12px 0;
     background-color: $semi-dark;
-    border-top: 1px solid $light;
-    border-bottom: 1px solid $light;
+    border: 1px solid $light;
     transform: translateY(0);
     opacity: 1;
     &__nav{
@@ -47,15 +46,22 @@
         align-items: center;
         justify-content: space-around;
     }
-    &__link{
+    &-link{
+        border-right: 1px solid $light;
+        flex-basis: 20%;
+        text-align: center;
         font-size: 17px;
         text-transform: uppercase;
-        color: $text-color;
-        &:hover{
-            cursor: pointer;
+        &__item{
+            color: $text-color;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &:last-child{
+            border: none;
         }
     }
-  
 }
 .logo{
     position: relative;
@@ -94,6 +100,69 @@
             position: absolute;
             top: 90%;
             right: 1%;
+        }
+    }
+}
+@media (max-width: 768px){
+    .menu{
+        border-left: none;
+        border-right: none;
+    }
+}
+@media (max-width: 670px){ 
+    .navbar{
+        &__container{
+            padding: 0;
+        }
+        &-info{
+            display: none;
+        }
+        &-social{
+            height: 100%;
+            flex-basis: 10%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            &__item{
+                position: relative;
+                margin: 0;
+                font-size: 30px;
+                &:after{
+                    content: '';
+                    height: 1px;
+                    width: 120%;
+                    background-color: rgba($light, 1);
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    bottom: -30%;
+                }
+            }
+        }
+        &__logo{
+            flex-basis: 90%;
+            padding-left: 10%;
+        }
+    }
+    .logo{
+        &__text{
+            margin-bottom: 5px;
+            font-size: 72px;
+            text-transform: uppercase;
+            @include bold;
+        }
+        &__subtext{
+            font-size: 16px;
+            &:before{
+                width: 25%;
+                top: 92%;
+                left: 22.5%;
+            }
+            &:after{
+                width: 25%;
+                top: 92%;
+                right: 11.5%;
+            }
         }
     }
 }

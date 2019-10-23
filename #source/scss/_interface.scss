@@ -1,13 +1,20 @@
 body{
     @include light;
     color: $text-color;
-    height: 2000px;
+    background-color: $dark;
+    height: 100%;
 }
 img{
     max-width:100%
 }
 .section{
+    margin: auto;
     padding: 150px 0 150px 0;
+    background-color: $light;
+    max-width: $max-width;
+    padding: 10px;
+    border-right: 1px solid $light;
+    border-left: 1px solid $light;
     &-title{
         font-size: 30px;
         @include bold;
@@ -16,5 +23,23 @@ img{
     }
     &__title{
         margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1249px){
+    .section{
+        max-width: 960px;
+    }
+}
+@media (max-width: 991px){ 
+    .section{
+        max-width: 750px;
+    }
+}
+@media (max-width: 768px){
+    .section{
+        border: none;
+        max-width: 100%;
+        padding: 0;
     }
 }
