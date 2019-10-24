@@ -264,3 +264,11 @@
         }
     }
 }
+@media (max-width: 426px){ 
+    .logo{
+        &__text{
+            font-size: 54px;
+            text-transform: uppercase;
+        }
+    }
+}
