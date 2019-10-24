@@ -14,14 +14,24 @@
             border-radius: 50%;
             border: 1px solid $light;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            &_stub{
+                width: 250px;
+                height: 250px;
+                background-color: $semi-light;
+                border-radius: 50%;
+                border: 1px solid $light;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            }
         }
+    }
+    &__decoration{
+        margin-bottom: 2%;
     }
     &-decoration{
         display: flex;
         align-items: center;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         color: $light;
-        margin-bottom: 2%;
         &__slash{
             font-size: 114px;
             font-family: "Economica", serif;
@@ -45,7 +55,7 @@
 }
 @media (max-width: 1249px){
     .title{
-        &-decoration{
+        &__decoration{
             margin-bottom: 8%;
         }
     }
@@ -66,8 +76,12 @@
 }
 @media (max-width: 670px){ 
     .title{
+        &__logo{
+            margin-bottom: 20px;
+        }
         &-block{
             flex-direction: column;
+            align-items: center;
         }
     }
 }
