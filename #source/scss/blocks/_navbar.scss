@@ -46,8 +46,6 @@
     opacity: 1;
     &__nav{
         display: flex;
-        align-items: center;
-        justify-content: space-around;
         &_phone{
             width: 100%;
         }
@@ -68,18 +66,16 @@
             border: none;
         }
         &-open{
-            flex-basis: 100%;
+            margin-left: 8px;
             display: block;
             &_active{
-                flex-basis: 0%;
                 display: none;
             }
         }
         &-close{
-            flex-basis: 0%;
+            margin-left: 8px;
             display: none;
             &_active{
-                flex-basis: 100%;
                 display: block;
             }
         }
@@ -99,6 +95,72 @@
 }
 .navigation{
     display: none;
+}
+.visuallyHidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+.hamburger {
+    width: 17px;
+    height: 17px;
+    position: relative;
+}
+.bar {
+    padding: 0;
+    width: 17px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
+    transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
+    &1{
+        top: 3px;
+    }
+    &2{
+        top: 7.5px;
+        width: 1px;
+        transform: rotate(90deg);
+        left: 7.5px;
+    }
+    &3{
+        top: 7.5px;
+        right: 0;
+        width: 1px;
+        left: 7.5px;
+    }
+    &4{
+        top: 7.5px;
+        bottom: 0;
+    }
+    &5{
+        bottom: 3px;
+    }
+}
+.bar1_click{
+    top: 7.5px;
+    background-color: transparent;
+}
+.bar2_click{
+    left: 0px;
+    width: 17px;
+    transform: rotate(45deg);
+}
+.bar3_click{
+    left: 0;
+    width: 17px;
+    transform: rotate(-45deg);
+}
+.bar4_click{
+    background-color: transparent;
+}
+.bar5_click{
+    bottom: 7.5px;
+    background-color: transparent; 
 }
 .logo{
     position: relative;
@@ -156,34 +218,11 @@
         &-wrap{
             position: relative;
         }
+        &-social{
+           display: none;
+        }
         &-info{
             display: none;
-        }
-        &-social{
-            width: 50px;
-            display: flex;
-            justify-content: space-around;
-            height: 100%;
-            position: absolute;
-            right: 0;
-            flex-direction: column;
-            border-left: 1px solid $light;
-            &__link{
-                display: block;
-                width: 100%;
-                padding: 10px 0;
-                border-bottom: 1px solid $light;
-                margin: 0;
-                i{
-                    font-size: 30px; 
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-            &:hover{
-                cursor: pointer;
-            }
         }
         &__logo{
             flex-basis: 100%;
@@ -206,15 +245,15 @@
             }
         }
     }
-}
-@media (max-width: 540px){ 
-    .navbar{
-        &-social{
-           display: none;
-        }
-    }
     .menu{
         display: none;
+        &__nav{
+            &_phone{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
         &_phone{
             display: block;
         }
