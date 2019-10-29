@@ -10,7 +10,29 @@
     <body>
         <header class="header">
             <div class="navigation">
-                <div class="container">
+                <div class="navigation__title">
+                    <div class="navigation-logo">
+                        <strong class="navigation-logo__text">
+                            <span>Khakholin</span>
+                        </strong>
+                    </div> 
+                    <nav class="menu-phone">
+                        <div class="visuallyHidden hamburger hamburger4">
+                            <span class="bar bar1"></span>
+                            <span class="bar bar2"></span>
+                            <span class="bar bar3"></span>
+                            <span class="bar bar4"></span>
+                            <span class="bar bar5"></span>
+                        </div>
+                        <a href="#" class="menu-link-open">
+                            <span class="menu-link__item">Open navigation</span>
+                        </a>
+                        <a href="#" class="menu-link-close">
+                            <span class="menu-link__item">Close navigation</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="navigation-bar">
                     <nav class="navigation__block">
                         <a href="#" class="navigation__link">First</a>
                         <a href="#" class="navigation__link">Second</a>
@@ -34,41 +56,22 @@
             <section class="section navbar">
                 <div class="container navbar__container">
                     <div class="navbar-wrap">
-                        <div class="navbar-info">
-                            <a href="tel:+79130052654" class="navbar__phone">
-                                <i class="fas fa-phone"></i>
-                                +7 (913) 005-26-54
-                            </a>
-                            <a href="mailto:khakholin@mail.ru" class="navbar__email">
-                                <i class="fas fa-envelope"></i>
-                                khakholin@mail.ru
-                            </a>
-                        </div>
-                        <div class="logo navbar__logo">
-                            <strong class="logo__text">
-                                <span>Khakholin</span>
-                            </strong>
-                            <span class="logo__subtext">web-designer</span>
-                        </div>
-                        <div class="navbar-social">
-                            <a href="http://vk.com/khakholin" target="_blank" class="navbar-social__link">
-                                <i class="fab fa-vk"></i>
-                            </a>
-                            <a href="http://instagram.com/khakholin" target="_blank" class="navbar-social__link">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="http://github.com/khakholin" target="_blank" class="navbar-social__link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
+
                     </div>
                 </div>
                 <!-- /.container -->
             </section>
             <!-- /.navbar -->
             <section class="section menu">
-                <div class="container">
-                    <nav class="menu__nav">
+                <div class="menu-wrap">
+                    <div class="menu-wrap__left">
+                        <div class="logo menu__logo">
+                            <strong class="logo__text">
+                                <span>Khakholin</span>
+                            </strong>
+                            <span class="logo__subtext">web-designer</span>
+                        </div>  
+                        <nav class="menu__nav">
                             <a href="#" class="menu-link">
                                 <span class="menu-link__item">First</span>
                             </a>
@@ -84,28 +87,31 @@
                             <a href="#" class="menu-link">
                                 <span class="menu-link__item">Fifth</span>
                             </a>
-                    </nav>
-                </div>
-            </section>
-            <section class="section menu menu_phone">
-                <div class="container">
-                    <nav class="menu__nav">
-                        <div class="menu__nav_phone">
-                            <div class="visuallyHidden hamburger hamburger4">
-                                <span class="bar bar1"></span>
-                                <span class="bar bar2"></span>
-                                <span class="bar bar3"></span>
-                                <span class="bar bar4"></span>
-                                <span class="bar bar5"></span>
-                            </div>
-                            <a href="#" class="menu-link-open">
-                                <span class="menu-link__item">Open navigation</span>
+                        </nav>
+                    </div>
+                    <div class="menu-wrap__right">
+                        <div class="menu-info">
+                            <a href="tel:+79130052654" class="menu__phone">
+                                <i class="fas fa-phone"></i>
+                                +7 (913) 005-26-54
                             </a>
-                            <a href="#" class="menu-link-close">
-                                <span class="menu-link__item">Close navigation</span>
+                            <a href="mailto:khakholin@mail.ru" class="menu__email">
+                                <i class="fas fa-envelope"></i>
+                                khakholin@mail.ru
                             </a>
                         </div>
-                    </nav>
+                        <div class="menu-social">
+                            <a href="http://vk.com/khakholin" target="_blank" class="menu-social__link">
+                                <i class="fab fa-vk"></i>
+                            </a>
+                            <a href="http://instagram.com/khakholin" target="_blank" class="menu-social__link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="http://github.com/khakholin" target="_blank" class="menu-social__link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="section title">
