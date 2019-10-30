@@ -1,6 +1,6 @@
 .footer{
     padding: 40px 10px;
-    background-color: #262626;
+    background-color: #000000;
     color: #ffffff;
     &-block{
         display: flex;
@@ -19,10 +19,66 @@
             color: #767676;
         }
     }
-    &__pay{
-        &-logo{
-            margin: 10px;
+    &-logo{
+        flex-basis: 33.33%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 38px;
+        &-lines{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            &__left{ 
+                .footer-logo-line:nth-child(2), .footer-logo-line:nth-child(4){
+                    margin-right: 20px;
+                    width: 55px;
+                }
+                .footer-logo-line:nth-child(3){
+                    margin-right: 40px;
+                    width: 60px;
+                }
+            }
+            &__right{
+                .footer-logo-line:nth-child(2), .footer-logo-line:nth-child(4){
+                    margin-left: 20px;
+                    width: 55px;
+                }
+                .footer-logo-line:nth-child(3){
+                    margin-left: 40px;
+                    width: 60px;
+                }
+            }
+        }
+        &-line{
+            width: 43px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 5px 0;
+        }
+        &-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90px;
+            height: 90px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            
+        }
+        &-second{
+            width: 82px;
+            height: 82px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
             font-size: 32px;
+            @include bold;
+            text-transform: uppercase;
+            letter-spacing: -1.15px;
         }
     }
     a{
@@ -42,6 +98,7 @@
         color: #767676;
     }
     &__contacts{
+        flex-basis: 33.33%;
         text-align: right;
     }
     &__phone{
@@ -53,6 +110,9 @@
     &__mail{
         display: block;
         margin-bottom: 20px;
+    }
+    &__description{
+        flex-basis: 33.33%;
     }
 }
 @media (max-width: 768px){

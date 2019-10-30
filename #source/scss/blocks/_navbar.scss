@@ -1,34 +1,24 @@
-.navbar{
-    transform: translateY(0);
-    z-index: 1;
-    padding: 0;
-    border: 0;
-    height: 50px;
+.navbar{ 
     background-color: $dark;
-    &-wrap{
-        height: 150px;
-    }    
 }
 .menu{
-    z-index: 1;
     position: relative;
     padding: 12px 20px;
     background-color: white;
     border-bottom: 1px solid rgb(39, 39, 39);
     box-shadow:  0 5px 4px -4px rgba(0, 0, 0, 0.5);
-    transform: translateY(0);
-    opacity: 1;
+    transition: 0.4s ease-in-out;
     &-wrap{
         display: flex;
         justify-content: space-between;
         &__left{
-            flex-basis: 40%;
+            flex-basis: 50%;
             display: flex;
             justify-content: flex-start;
             align-items: center;
         }
         &__right{
-            flex-basis: 60%;
+            flex-basis: 50%;
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -40,51 +30,47 @@
         display: flex;
         justify-content: space-around;
         min-width: 450px;
+        max-width: 450px;
         &_phone{
             width: 100%;
         }
     }
     &-link{
-        border-right: 1px solid $light;
-        flex-basis: 20%;
+        //border-right: 1px solid $light;
         text-align: center;
         font-size: 17px;
         text-transform: uppercase;
+        position: relative;
+        &:after{
+            content: '';
+            height: 100%;
+            width: 1px;
+            background-color: black;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -11px;
+        }
+        &:hover:after{
+            cursor: auto;
+        }
+        &:last-child:after{
+            display: none;
+        }
         &__item{
             color: black;
-        }
-        &:hover{
-            cursor: pointer;
-        }
-        &:last-child{
-            border: none;
-        }
-        &-open{
-            margin-left: 8px;
-            display: block;
-            &_active{
-                display: none;
+            
+            &:hover{
+                cursor: pointer;
             }
         }
-        &-close{
-            margin-left: 8px;
-            display: none;
-            &_active{
-                display: block;
-            }
-        }
+        
         &__open{
             color: black;
         }
         &__close{
             color: black;
         }
-    }
-    &-phone{
-        text-align: center;
-        font-size: 17px;
-        text-transform: uppercase;
-        display: none;
     }
     &-info{
         @include bold;
@@ -111,6 +97,89 @@
     }
 }
 .navigation{
+    margin: auto;
+    width: 100%;
+    &-menu{
+        display: flex;
+        text-align: center;
+        font-size: 17px;
+        text-transform: uppercase;
+        &:hover{
+            cursor: pointer;
+        }
+        &__item{
+            color: black;
+        }
+        &-open{
+            margin-left: 8px;
+            display: block;
+            &_active{
+                display: none;
+            }
+        }
+        &-close{
+            margin-left: 8px;
+            display: none;
+            &_active{
+                display: block;
+            }
+        }
+    }
+    &-bar{
+        display: none;
+        position: absolute;
+        padding: 20px 20px;
+        height: 242px;
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-200%);
+        opacity: 0;
+        box-shadow:  0 5px 4px -4px rgba(0, 0, 0, 0.5);
+        transition: 0.4s ease-in-out;
+        &_active{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        &-block{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            &__link{
+                font-size: 17px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                color: black;
+            }
+        }
+        &-social{
+            &__link{
+                margin-right: 20px;
+                i{
+                color: black;
+                font-size: 17px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }       
+    &-top{
+        padding: 12px 20px;
+        z-index: 1; 
+        position: relative;
+        background-color: #ffffff;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgb(39, 39, 39);
+        box-shadow:  0 5px 4px -4px rgba(0, 0, 0, 0.5);
+        transition: 0.4s ease-in-out;
+    }
     display: none;
 }
 .visuallyHidden {
@@ -132,26 +201,25 @@
     background-color: black;
     display: block;
     border-radius: 4px;
-    transition: all 0.4s ease-in-out;
     position: absolute; 
     transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s;
     &1{
         top: 3px;
     }
     &2{
-        top: 7.5px;
+        top: 8px;
         width: 1px;
         transform: rotate(90deg);
         left: 7.5px;
     }
     &3{
-        top: 7.5px;
+        top: 8px;
         right: 0;
         width: 1px;
         left: 7.5px;
     }
     &4{
-        top: 7.5px;
+        top: 8px;
         bottom: 0;
     }
     &5{
@@ -219,132 +287,29 @@
         }
     }
 }
-@media (max-width: 1160px){ 
-    .navbar{
-        &-wrap{
-            position: relative;
-        }
-        &-social{
-           display: none;
-        }
-        &-info{
-            display: none;
-        }
-        &__logo{
-            flex-basis: 100%;
-        }
-        &__container{
-            padding: 0;
-        }
-    }
-    .logo{
-        &__text{
-            margin-bottom: 5px;
-            font-size: 72px;
-            text-transform: uppercase;
-            @include bold;
-        }
-        &__subtext{
-            font-size: 16px;
-            &:before{
-                display: none;
-            }
-            &:after{
-                display: none;
-            }
-        }
-    }
+@media (max-width: 1199px){ 
     .menu{
         display: none;
-        &-phone{
-            display: flex;
-            margin-right: 9px;
-        }
     }
-    .navigation{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        z-index: 0;
-        position: fixed;
-        width: 100%;
-        top: 50px;
-/*
-        transform: translateY(0);
-            opacity: 1;*/
-        &-bar{
-            z-index: 0;
-            padding-top: 20px;
-            height: 100%;
-            width: 100%;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            transform: translateY(-200%);
-            opacity: 0;
-            transition: 0.3s;
-            &_active{
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }       
-        &__title{
-            z-index: 1;
-            background-color: #ffffff;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgb(39, 39, 39);
-            box-shadow:  0 5px 4px -4px rgba(0, 0, 0, 0.5);
-            padding: 20px 0;
-        }
-        &-logo{
-            margin-left: 9px;
-            &__text{
-                color: black;
-                display: block;
-                font-size: 32px;
-                text-transform: uppercase;
-                @include bold;
-            }
-        }
-        &__block{
-            margin-left: 20px;
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            flex-direction: column;
-        }
-        &__link{
-            font-size: 17px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            color: black;
-        }
-        &-social{
-            width: 100%;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            &__link{
-                margin-right: 20px;
-                i{
-                color: black;
-                font-size: 17px;
-                }
-                &:hover{
-                    cursor: pointer;
-                }
-            }
-        }
+
+    .navigation{  
+        display: block;
     }
 }
 @media (max-width: 426px){ 
     .logo{
         &__text{
-            font-size: 54px;
-            text-transform: uppercase;
+            margin-bottom: 0;
+            font-size: 25px;
+        }
+        &__subtext{
+            display: none;
+        }
+    }
+    .navigation{
+        &-top, &-bar{
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
