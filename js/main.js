@@ -45,7 +45,7 @@ $(window).load(function(){
                   $('.menu').css({'position':'fixed', 'top':'0'});
                   $('.title').css({'padding-top':'74px'});
                   if (windowTop-menuTop > 50){
-                        $('.menu').css({'padding-top':'5px', 'padding-bottom':'5px'});
+                        $('.menu').css({'padding-top':'8px', 'padding-bottom':'8px'});
                   }
                   else{
                         $('.menu').css({'padding-top':'12px', 'padding-bottom':'12px'}); 
@@ -59,7 +59,7 @@ $(window).load(function(){
                   $('.navigation').css({'position':'fixed', 'top':'0'});
                   $('.title').css({'padding-top':'74px'});
                   if (windowTop-navTop > 50){
-                        $('.navigation-top').css({'padding-top':'5px', 'padding-bottom':'5px'});
+                        $('.navigation-top').css({'padding-top':'8px', 'padding-bottom':'8px'});
                   }
                   else{
                         if ($(window).width() <= '426'){

@@ -64,7 +64,6 @@
                 cursor: pointer;
             }
         }
-        
         &__open{
             color: black;
         }
@@ -264,7 +263,7 @@
     &__subtext{
         display: block;
         font-size: 12px;
-        color: rgba(black, 0.7);
+        color: rgba(black, 1);
         &:before{
             content: '';
             height: 1px;
@@ -303,13 +302,87 @@
             font-size: 25px;
         }
         &__subtext{
-            display: none;
+            &:before{
+                width: 23%;
+                background-color: rgba($light, 0.7);
+                display: block;
+                position: absolute;
+                top: 84%;
+                left: 1%;
+            }
+            &:after{
+                content: '';
+                height: 1px;
+                width: 23%;
+                background-color: rgba($light, 0.7);
+                display: block;
+                position: absolute;
+                top: 84%;
+                right: 1%;
+            }
         }
     }
     .navigation{
         &-top, &-bar{
-            padding-left: 0;
-            padding-right: 0;
+            padding-left: 4px;
+            padding-right: 4px;
         }
+        &-menu{
+            &__item{
+                display: none;
+            }
+        }
+    }
+    .hamburger {
+        width: 25px;
+        height: 25px;
+        position: relative;
+    }
+    .bar {
+        width: 100%;
+        height: 3px;
+        &1{
+            top: 2px;
+        }
+        &2{
+            top: 10.5px;
+            width: 1px;
+            transform: rotate(90deg);
+            left: 10.5px;
+        }
+        &3{
+            top: 10.5px;
+            right: 0;
+            width: 1px;
+            left: 10.5px;
+        }
+        &4{
+            top: 10.5px;
+            bottom: 0;
+        }
+        &5{
+            bottom: 2px;
+        }
+    }
+    .bar1_click{
+        top: 10.5px;
+        background-color: transparent;
+    }
+    .bar2_click{
+        left: 0px;
+        width: 25px;
+        transform: rotate(45deg);
+    }
+    .bar3_click{
+        left: 0;
+        width: 25px;
+        transform: rotate(-45deg);
+    }
+    .bar4_click{
+        background-color: transparent;
+    }
+    .bar5_click{
+        bottom: 10.5px;
+        background-color: transparent; 
     }
 }
