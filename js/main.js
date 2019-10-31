@@ -75,4 +75,26 @@ $(window).load(function(){
                   $('.title').css({'padding-top':'10px'});
             }
       });
+      for (let i = 0; i < 7; i++) {
+            $('.contacts__image').eq(i).mouseover(function(){
+                  $('.contacts__image').eq(i).css({'opacity': '0.7'});
+                  $('.contacts__link').eq(i).css({'opacity': '0.7'});
+                  $('.contacts__image').eq(i).css({'transform':'scale(1.3)'});
+            });
+            $('.contacts__image').eq(i).mouseout(function(){
+                  $('.contacts__image').eq(i).css({'opacity': '1'});
+                  $('.contacts__link').eq(i).css({'opacity': '1'});
+                  $('.contacts__image').eq(i).css({'transform':'none'});
+            });
+            $('.contacts__link').eq(i).mouseover(function(){
+                  $('.contacts__link').eq(i).css({'opacity': '0.7'});
+                  $('.contacts__image').eq(i).css({'opacity': '0.7'});
+                  $('.contacts__image').eq(i).css({'transform':'scale(1.3)'});
+            });
+            $('.contacts__link').eq(i).mouseout(function(){
+                  $('.contacts__link').eq(i).css({'opacity':'1'});
+                  $('.contacts__image').eq(i).css({'opacity': '1'});
+                  $('.contacts__image').eq(i).css({'transform':'none'});
+            });
+      }
 });

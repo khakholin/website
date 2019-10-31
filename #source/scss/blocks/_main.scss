@@ -1,0 +1,230 @@
+.main{
+    background-color: $bg-secondary;
+    &-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &-logo{
+        display: flex;
+        align-items: center;
+        &-lines{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            &__left{ 
+                .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
+                    margin-right: 30px;
+                    width: 115px;
+                }
+                .main-logo-line:nth-child(3){
+                    margin-right: 50px;
+                    width: 125px;
+                }
+            }
+            &__right{
+                .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
+                    margin-left: 30px;
+                    width: 115px;
+                }
+                .main-logo-line:nth-child(3){
+                    margin-left: 50px;
+                    width: 125px;
+                }
+            }
+        }
+        &-line{
+            width: 100px;
+            height: 4px;
+            background-color: #000000;
+            margin: 7px 0;
+        }
+        &-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            border: 4px solid #000000;
+            border-radius: 50%;
+        }
+        &-second{
+            width: 188px;
+            height: 188px;
+            border: 4px solid #000000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000000;
+            font-size: 64px;
+            font-family: Roboto;
+            font-weight: 00;
+            text-transform: uppercase;
+            letter-spacing: -1.15px;
+        }
+    }
+    &-name{
+        margin-top: 20px;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 12px;
+        text-indent: 12px;
+        color: #39383a;
+        font-family: Roboto;
+        font-weight: 500;
+    }
+    &-description{
+        margin-top: 10px;
+        letter-spacing: 4px;
+        text-indent: 4px;
+        position: relative;
+        &:before{
+            content: '';
+            height: 1px;
+            width: 138px;
+            background-color: rgba($light, 0.7);
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -134px;
+        }
+        &:after{
+            content: '';
+            height: 1px;
+            width: 138px;
+            background-color: rgba($light, 0.7);
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -134px;
+        }
+    }
+}
+@media (max-width: 571px){
+    .main{
+        &-logo{
+            &-lines{
+                &__left{ 
+                    .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
+                        margin-right: 30px;
+                        width: 90px;
+                    }
+                    .main-logo-line:nth-child(3){
+                        margin-right: 50px;
+                        width: 105px;
+                    }
+                }
+                &__right{
+                    .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
+                        margin-left: 30px;
+                        width: 90px;
+                    }
+                    .main-logo-line:nth-child(3){
+                        margin-left: 50px;
+                        width: 105px;
+                    }
+                }
+            }
+            &-line{
+                width: 75px;
+                height: 3px;
+                margin: 6px 0;
+            }
+            &-img{
+                width: 150px;
+                height: 150px;
+                border: 3px solid #000000;
+            }
+            &-second{
+                width: 142px;
+                height: 142px;
+                border: 3px solid #000000;
+                font-size: 48px;
+            }
+        }
+        &-name{
+            margin-top: 15px;
+            font-size: 15px;
+            letter-spacing: 10px;
+            text-indent: 10px;
+        }
+        &-description{
+            font-size: 12px;
+            margin-top: 5px;
+            letter-spacing: 2px;
+            text-indent: 2px;
+            &:before{
+                width: 115px;
+                left: -113px;
+            }
+            &:after{
+                width: 115px;
+                right: -113px;
+            }
+        }
+    }
+}
+@media (max-width: 481px){
+    .main{
+        &-logo{
+            &-lines{
+                &__left{ 
+                    .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
+                        margin-right: 20x;
+                        width: 55px;
+                    }
+                    .main-logo-line:nth-child(3){
+                        margin-right: 40px;
+                        width: 60px;
+                    }
+                }
+                &__right{
+                    .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
+                        margin-left: 20px;
+                        width: 55px;
+                    }
+                    .main-logo-line:nth-child(3){
+                        margin-left: 40px;
+                        width: 60px;
+                    }
+                }
+            }
+            &-line{
+                width: 43px;
+                height: 2px;
+                margin: 5px 0;
+            }
+            &-img{
+                width: 90px;
+                height: 90px;
+                border: 2px solid #000000;
+            }
+            &-second{
+                width: 82px;
+                height: 82px;
+                border: 2px solid #000000;
+                font-size: 32px;
+            }
+        }
+        &-name{
+            margin-top: 10px;
+            font-size: 12px;
+            letter-spacing: 7px;
+            text-indent: 7px;
+        }
+        &-description{
+            font-size: 10px;
+            &:before{
+                width: 78px;
+                left: -76px;
+            }
+            &:after{
+                width: 78px;
+                right: -76px;
+            }
+        }
+    }
+}

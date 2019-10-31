@@ -10,6 +10,9 @@
         &__logo{
             margin-left: 10px;
             font-size: 24px;
+            &:hover{
+                opacity: 0.7;
+            }
         }
     }
     &-adaptive{
@@ -76,7 +79,7 @@
             align-items: center;
             color: #ffffff;
             font-size: 32px;
-            @include bold;
+            font-family: Roboto;
             text-transform: uppercase;
             letter-spacing: -1.15px;
         }
@@ -106,10 +109,16 @@
         margin-bottom: 20px;
         font-size: 20px;
         @include bold;
+        &:hover{
+            opacity: 0.7;
+        }
     }
     &__mail{
         display: block;
         margin-bottom: 20px;
+        &:hover{
+            opacity: 0.7;
+        }
     }
     &__description{
         flex-basis: 33.33%;

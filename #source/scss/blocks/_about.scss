@@ -1,0 +1,33 @@
+.about{
+    background-color: white;
+    &-block{
+        display: flex;
+        justify-content: flex-start;
+    }
+    &-logo{
+        position: relative;
+        width: 220px;
+        &__description{
+            z-index: 1;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            bottom: 15px;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            @include polaroid;
+        }
+        &__image{
+            border: 10px solid #fff;
+            border-bottom: 45px solid #fff;
+            box-shadow: 0 3px 5px #777;
+            filter: grayscale(100%); 
+        }
+    }
+    &-education{
+        margin-left: 40px;
+        &__title{
+            padding-left: 10px;
+        }
+    }
+}
