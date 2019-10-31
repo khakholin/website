@@ -280,21 +280,21 @@
         &:before{
             content: '';
             height: 1px;
-            width: 38px;
+            width: 35px;
             background-color: rgba($light, 0.7);
             display: block;
             position: absolute;
-            top: 42px;
+            top: 43px;
             left: 2px;
         }
         &:after{
             content: '';
             height: 1px;
-            width: 38px;
+            width: 35px;
             background-color: rgba($light, 0.7);
             display: block;
             position: absolute;
-            top: 42px;
+            top: 43px;
             right: 2px;
         }
     }
@@ -346,12 +346,12 @@
         }
         &__subtext{
             &:before{
-                width: 18px;
-                top: 30px;
+                width: 16px;
+                top: 31px;
             }
             &:after{
-                width: 18px;
-                top: 30px; 
+                width: 16px;
+                top: 31px; 
             }
         }
     }

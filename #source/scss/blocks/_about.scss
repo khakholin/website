@@ -5,6 +5,7 @@
         justify-content: flex-start;
     }
     &-logo{
+        flex-basis: 20%;
         position: relative;
         width: 220px;
         &__description{
@@ -24,10 +25,34 @@
             filter: grayscale(100%); 
         }
     }
-    &-education{
-        margin-left: 40px;
+    &-content{
+        flex-basis: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__subunit{
+        padding-left: 40px;
+    }
+    &-subunit{
         &__title{
-            padding-left: 10px;
+            font-size: 16px;
+            text-transform: uppercase;
+            &:before{
+                content: '';
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: rgba($light, 0.7);
+                margin-bottom: 15px;
+            }
+            &:after{
+                content: '';
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: rgba($light, 0.7);
+                margin: 15px 0;   
+            }
         }
     }
 }

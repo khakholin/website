@@ -84,7 +84,7 @@
         &:before{
             content: '';
             height: 1px;
-            width: 138px;
+            width: 135px;
             background-color: rgba($light, 0.7);
             display: block;
             position: absolute;
@@ -94,7 +94,7 @@
         &:after{
             content: '';
             height: 1px;
-            width: 138px;
+            width: 135px;
             background-color: rgba($light, 0.7);
             display: block;
             position: absolute;
@@ -157,11 +157,11 @@
             letter-spacing: 2px;
             text-indent: 2px;
             &:before{
-                width: 115px;
+                width: 112px;
                 left: -113px;
             }
             &:after{
-                width: 115px;
+                width: 112px;
                 right: -113px;
             }
         }
@@ -218,11 +218,11 @@
         &-description{
             font-size: 10px;
             &:before{
-                width: 78px;
+                width: 75px;
                 left: -76px;
             }
             &:after{
-                width: 78px;
+                width: 75px;
                 right: -76px;
             }
         }
