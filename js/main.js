@@ -1,3 +1,4 @@
+//activation and deactivation of the dropdown menu
 function showNav(){
       $('.navigation-bar').addClass('navigation-bar_active');
       $('.navigation-menu-open').addClass('navigation-menu-open_active');
@@ -20,81 +21,73 @@ function hideNav(){
       $('.bar5').removeClass('bar5_click');
       $('.navigation-top').css({'box-shadow':'0 5px 4px -4px rgba(0, 0, 0, 0.5)'});
 }
-$(window).load(function(){
-      $('.navigation-menu ').click(function(event){
-            event.stopPropagation();
-            if(!$('.navigation-bar').hasClass('navigation-bar_active')) {
-                  showNav();
-            }
-            else {
-                  hideNav();
-            }
-      });
-      $('.navigation-bar').click(function(event) {
-        event.stopPropagation();
-      });
-      $(window).click(function(event) {
+$('.navigation-menu ').click(function(event){
+      event.stopPropagation();
+      if(!$('.navigation-bar').hasClass('navigation-bar_active')) {
+            showNav();
+      }
+      else {
             hideNav();
-      });
-      $('.navigation-bar-block__link').click(hideNav);
-      var menuTop = $('.menu').offset().top;
-      var navTop =  $('.navigation-top').offset().top;
-      $(window).bind('scroll', function() {
-            var windowTop = $(this).scrollTop();
-            if (windowTop > menuTop) {
-                  $('.menu').css({'position':'fixed', 'top':'0'});
-                  $('.title').css({'padding-top':'74px'});
-                  if (windowTop-menuTop > 50){
-                        $('.menu').css({'padding-top':'8px', 'padding-bottom':'8px'});
-                  }
-                  else{
-                        $('.menu').css({'padding-top':'12px', 'padding-bottom':'12px'}); 
-                  }
-            }
-            else{
-                  $('.menu').css({'position':'relative'});
-                  $('.title').css({'padding-top':'10px'});
-            }
-            if (windowTop > navTop) {
-                  $('.navigation').css({'position':'fixed', 'top':'0'});
-                  $('.title').css({'padding-top':'74px'});
-                  if (windowTop-navTop > 50){
-                        $('.navigation-top').css({'padding-top':'8px', 'padding-bottom':'8px'});
-                  }
-                  else{
-                        if ($(window).width() <= '426'){
-                              $('.navigation-top').css({'padding':'20px 0'}); 
-                        }
-                        else{
-                              $('.navigation-top').css({'padding':'20px 12px'}); 
-                        }
-                  }
-            }
-            else{
-                  $('.navigation').css({'position':'relative'});
-                  $('.title').css({'padding-top':'10px'});
-            }
-      });
-      for (let i = 0; i < 7; i++) {
-            $('.contacts__image').eq(i).mouseover(function(){
-                  $('.contacts__image').eq(i).css({'opacity': '0.7'});
-                  $('.contacts__link').eq(i).css({'opacity': '0.7'});
-                  $('.contacts__image').eq(i).css({'transform':'scale(1.3)'});
-            });
-            $('.contacts__image').eq(i).mouseout(function(){
-                  $('.contacts__image').eq(i).css({'opacity': '1'});
-                  $('.contacts__link').eq(i).css({'opacity': '1'});
-                  $('.contacts__image').eq(i).css({'transform':'none'});
-            });
-            $('.contacts__link').eq(i).mouseover(function(){
-                  $('.contacts__link').eq(i).css({'opacity': '0.7'});
-                  $('.contacts__image').eq(i).css({'opacity': '0.7'});
-                  $('.contacts__image').eq(i).css({'transform':'scale(1.3)'});
-            });
-            $('.contacts__link').eq(i).mouseout(function(){
-                  $('.contacts__link').eq(i).css({'opacity':'1'});
-                  $('.contacts__image').eq(i).css({'opacity': '1'});
-                  $('.contacts__image').eq(i).css({'transform':'none'});
-            });
       }
 });
+$('.navigation-bar').click(function(event) {
+      event.stopPropagation();
+});
+$(window).click(function(event) {
+      hideNav();
+});
+$('.navigation-bar-block__link').click(hideNav);
+
+//animating and changing menu after scrolling
+var menuTop = $('.menu').offset().top;
+var navTop =  $('.navigation-top').offset().top;
+$(window).bind('scroll', function() {
+      var windowTop = $(this).scrollTop();
+      if (windowTop > menuTop) {
+            $('.menu').css({'position':'fixed', 'top':'0'});
+            $('.main').css({'padding-top':'74px'});
+            if (windowTop-menuTop > 50){
+                  $('.menu').css({'padding-top':'8px', 'padding-bottom':'8px'});
+            }
+            else{
+                  $('.menu').css({'padding-top':'12px', 'padding-bottom':'12px'}); 
+            }
+      }
+      else{
+            $('.menu').css({'position':'relative'});
+            $('.main').css({'padding-top':'10px'});
+      }
+      if (windowTop > navTop) {
+            $('.navigation').css({'position':'fixed', 'top':'0'});
+            $('.main').css({'padding-top':'74px'});
+            if (windowTop-navTop > 50){
+                  $('.navigation-top').css({'padding-top':'8px', 'padding-bottom':'8px'});
+            }
+            else{
+                  if ($(window).width() <= '426'){
+                        $('.navigation-top').css({'padding':'20px 0'}); 
+                  }
+                  else{
+                        $('.navigation-top').css({'padding':'20px 12px'}); 
+                  }
+            }
+      }
+      else{
+            $('.navigation').css({'position':'relative'});
+            $('.main').css({'padding-top':'10px'});
+      }
+});
+
+//contact element animation
+for (let i = 0; i < 7; i++) {
+      $('.contacts-item__item').eq(i).mouseover(function(){
+            $('.contacts__image').eq(i).css({'opacity': '0.7'});
+            $('.contacts__link').eq(i).css({'opacity': '0.7'});
+            $('.contacts__image').eq(i).css({'transform':'scale(1.3)'});
+      });
+      $('.contacts-item__item').eq(i).mouseout(function(){
+            $('.contacts__image').eq(i).css({'opacity': '1'});
+            $('.contacts__link').eq(i).css({'opacity': '1'});
+            $('.contacts__image').eq(i).css({'transform':'none'});
+      });
+}

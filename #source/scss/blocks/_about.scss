@@ -2,22 +2,15 @@
     background-color: white;
     &-block{
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+        &__top{
+            display: flex;
+        }
     }
     &-logo{
         flex-basis: 20%;
         position: relative;
         width: 220px;
-        &__description{
-            z-index: 1;
-            position: absolute;
-            text-align: center;
-            width: 100%;
-            bottom: 15px;
-            color: rgb(0, 0, 0);
-            font-size: 20px;
-            @include polaroid;
-        }
         &__image{
             border: 10px solid #fff;
             border-bottom: 45px solid #fff;
@@ -31,11 +24,15 @@
         flex-direction: column;
     }
     &__subunit{
-        padding-left: 40px;
+        &_top{
+            padding-left: 40px;
+        }
     }
     &-subunit{
         &__title{
             font-size: 16px;
+            @include bold;
+            letter-spacing: 1.4px;
             text-transform: uppercase;
             &:before{
                 content: '';
@@ -43,7 +40,7 @@
                 height: 1px;
                 width: 100%;
                 background-color: rgba($light, 0.7);
-                margin-bottom: 15px;
+                margin-bottom: 25px;
             }
             &:after{
                 content: '';
@@ -51,8 +48,129 @@
                 height: 1px;
                 width: 100%;
                 background-color: rgba($light, 0.7);
-                margin: 15px 0;   
+                margin-top: 25px;   
             }
         }
+    }
+    &-cell{
+        position: relative;
+        margin: 25px 0;
+        padding-left: 30px;
+        &__title{
+            text-transform: uppercase;
+            @include bold;
+            font-size: 13px;
+        }
+        &__date{
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            @include bold;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+        &__description{
+            font-size: 11px;
+            letter-spacing: 0.8px;
+            text-align: justify;
+        }
+        &:before{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 2px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #000000;
+        }
+        &:after{
+            content: '';
+            display: block;
+            height: 1px;
+            width: 100%;
+            border-top: 1px dashed rgba($light, 0.7);
+            margin-top: 25px;   
+        }
+        &:last-child:after{
+            display: none;
+        }
+    }
+    &-bars{
+        display: flex;
+    }
+    &-skills{
+        flex-basis: 50%;
+        &__title{
+            font-size: 16px;
+            @include bold;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            &:before{
+                content: '';
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: rgba($light, 0.7);
+                margin-bottom: 25px;
+            }
+            &:after{
+                content: '';
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: rgba($light, 0.7);
+                margin-top: 25px;   
+            }
+        }
+    }
+}
+.skills-list{
+    &__item{
+        margin-bottom: 32px;
+        color: #39383a;
+        font-family: "Open Sans";
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.73px;
+        display: flex;
+        justify-content: space-between;
+
+        &:first-child{
+            margin-top: 32px;
+        }
+    }
+}
+.level{
+    width: 267px;
+    height: 8px;
+    border: 1px solid #898989;
+    margin-right: 50px;
+    position: relative;
+
+    &:before{
+        content: '';
+        height: 100%;
+        background-color: #898989;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &-90:before{
+        width: 90%;
+    }
+    &-80:before{
+        width: 80%;
+    }
+    &-65:before{
+        width: 65%;
+    }
+    &-60:before{
+        width: 60%;
+    }
+    &-50:before{
+        width: 50%;
     }
 }
