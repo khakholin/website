@@ -97,34 +97,6 @@
             display: none;
         }
     }
-    &-bars{
-        display: flex;
-    }
-    &-skills{
-        flex-basis: 50%;
-        &__title{
-            font-size: 16px;
-            @include bold;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            &:before{
-                content: '';
-                display: block;
-                height: 1px;
-                width: 100%;
-                background-color: rgba($light, 0.7);
-                margin-bottom: 25px;
-            }
-            &:after{
-                content: '';
-                display: block;
-                height: 1px;
-                width: 100%;
-                background-color: rgba($light, 0.7);
-                margin-top: 25px;   
-            }
-        }
-    }
 }
 .skills-list{
     &__item{
