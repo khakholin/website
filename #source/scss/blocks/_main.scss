@@ -84,22 +84,22 @@
         &:before{
             content: '';
             height: 1px;
-            width: 135px;
+            width: 158px;
             background-color: rgba($light, 0.7);
             display: block;
             position: absolute;
             top: 50%;
-            left: -134px;
+            left: -157px;
         }
         &:after{
             content: '';
             height: 1px;
-            width: 135px;
+            width: 158px;
             background-color: rgba($light, 0.7);
             display: block;
             position: absolute;
             top: 50%;
-            right: -134px;
+            right: -157px;
         }
     }
 }
@@ -157,12 +157,12 @@
             letter-spacing: 2px;
             text-indent: 2px;
             &:before{
-                width: 112px;
-                left: -113px;
+                width: 128px;
+                left: -129px;
             }
             &:after{
-                width: 112px;
-                right: -113px;
+                width: 128px;
+                right: -129px;
             }
         }
     }
@@ -218,12 +218,12 @@
         &-description{
             font-size: 10px;
             &:before{
-                width: 75px;
-                left: -76px;
+                width: 90px;
+                left: -91px;
             }
             &:after{
-                width: 75px;
-                right: -76px;
+                width: 90px;
+                right: -91px;
             }
         }
     }

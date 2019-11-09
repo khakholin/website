@@ -280,7 +280,7 @@
         &:before{
             content: '';
             height: 1px;
-            width: 35px;
+            width: 45px;
             background-color: rgba($light, 0.7);
             display: block;
             position: absolute;
@@ -290,7 +290,7 @@
         &:after{
             content: '';
             height: 1px;
-            width: 35px;
+            width: 45px;
             background-color: rgba($light, 0.7);
             display: block;
             position: absolute;
@@ -346,11 +346,11 @@
         }
         &__subtext{
             &:before{
-                width: 16px;
+                width: 26px;
                 top: 31px;
             }
             &:after{
-                width: 16px;
+                width: 26px;
                 top: 31px; 
             }
         }
