@@ -1516,10 +1516,10 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ffffff;
   font-size: 32px;
   text-transform: uppercase;
   letter-spacing: -1.15px;
+  font-family: serif;
 }
 
 .footer a {
