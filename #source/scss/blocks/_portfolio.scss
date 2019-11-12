@@ -1,3 +1,30 @@
 .portfolio{
     background-color: $bg-secondary;
+    &-block{
+        display: flex;
+        justify-content: center;
+    }
+    &-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+        &__image{
+            width: 220px;
+            height: 220px;
+            background: white url("../img/portfolio/avtokompas.jpg") no-repeat;
+            background-size: 100%;
+            border: 5px solid white;
+        }
+        &__description{
+            text-align: center;
+            max-width: 220px;
+            background-color: #fff;
+            border: 5px solid white;
+        }
+        &__header{
+            text-transform: uppercase;
+            @include bold;
+        }
+    }
 }
