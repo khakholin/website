@@ -1,16 +1,15 @@
 .about{
     background-color: white;
     &-block{
-        max-width: 650px;
+        max-width: 500px;
         margin: auto;
         &__me{
             display: flex;
-            justify-content: center;
         }
         &__my{
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
         }
     }
     &-logo{
@@ -60,7 +59,7 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
-            max-width: 350px;
+            max-width: 100%;
             &__top{
                 display: flex;
             }
