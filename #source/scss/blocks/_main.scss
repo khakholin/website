@@ -61,7 +61,6 @@
             color: #000000;
             font-size: 64px;
             font-family: Roboto;
-            font-weight: 00;
             text-transform: uppercase;
             letter-spacing: -1.15px;
         }
@@ -173,7 +172,7 @@
             &-lines{
                 &__left{ 
                     .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
-                        margin-right: 20x;
+                        margin-right: 20px;
                         width: 55px;
                     }
                     .main-logo-line:nth-child(3){
