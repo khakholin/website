@@ -91,3 +91,10 @@ for (let i = 0; i < 7; i++) {
             $('.contacts__image').eq(i).css({'transform':'none'});
       });
 }
+
+for (let i = 0; i < 2; i++) {
+      $('.portfolio-item__image').eq(i).hover(function(event){
+            $('.portfolio-item__description').eq(i).toggleClass('portfolio-item__description_active');
+            $('.portfolio-item__click').eq(i).toggleClass('portfolio-item__click_active');
+      });
+}

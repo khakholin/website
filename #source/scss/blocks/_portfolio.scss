@@ -1,5 +1,4 @@
 .portfolio{
-    background-color: $bg-secondary;
     &-block{
         display: flex;
         justify-content: center;
@@ -8,23 +7,89 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
         box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+        margin-right: 20px;
+        &:last-child{
+            margin-right: 0;
+        }
         &__image{
-            width: 220px;
-            height: 220px;
-            background: white url("../img/portfolio/avtokompas.jpg") no-repeat;
-            background-size: 100%;
-            border: 5px solid white;
+            display: flex;
+            justify-content: center;
+            width: 325px;
+            height: 325px;
+            transition: 0.5s ease-in-out;
+            color: black;
+            &:hover{
+                box-shadow: inset 0px 0px 163px rgba(0,0,0,0.5);
+            }
+            &_avtokompas{
+                background: white url("../img/portfolio/avtokompas.jpg") no-repeat;
+                background-size: 100%;
+            }
+            &_khakholin{
+                background: white url("../img/portfolio/khakholin.jpg") no-repeat;
+                background-size: 100%;
+            }
         }
         &__description{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid rgba(black, 0.2);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 20%;
             text-align: center;
-            max-width: 220px;
             background-color: #fff;
-            border: 5px solid white;
+            transform: translateY(100%);
+            z-index: -1;
+            transition: 0.5s ease-in-out;
+            &_active{
+                z-index: 0;
+                transform: translateY(0);
+            }
         }
-        &__header{
+        &__click{
+            text-transform: uppercase;
+            font-size: 20px;
+            position: absolute;
+            @include bold;
+            top: 40%;
+            transform: scale(0);
+            transition: 0.5s ease-in-out;
+            &_active{
+                transform: scale(1);
+            }
+        }
+        &__title{
             text-transform: uppercase;
             @include bold;
+        }
+    }
+}
+@media (max-width: 701px){
+    .portfolio{
+        &-block{ 
+            flex-wrap: wrap;
+        }
+        &-item{
+            margin-right: 0;
+            margin-bottom: 20px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media (max-width: 426px){
+    .portfolio{
+        &-item{
+            &__image{
+                width: 280px;
+                height: 280px;
+            }
         }
     }
 }
