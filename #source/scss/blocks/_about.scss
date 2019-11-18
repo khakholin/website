@@ -3,7 +3,6 @@
     &-block{
         display: flex;
         align-items: flex-start;
-        justify-content: space-between;
     }
 }
 .short-info{
@@ -32,6 +31,7 @@
     max-width: 250px;
     position: relative;
     padding-left: 7px;
+    margin-left: 66.66px;
     &:before{ 
         content: '';
         position: absolute;
