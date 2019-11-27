@@ -83,12 +83,7 @@ $(window).bind('scroll', function() {
             $('.main').css({'padding-top':'100px'});
       }
       //progress-line
-      if (windowTop != 0) {
-          $('.progress-line').css({'width': getWidthPercent()}); 
-      }
-      else{
-          $('.progress-line').css({'width': 0}); 
-      }
+      $('.progress-line').css({'width': getWidthPercent()}); 
 });
 
 //contact element animation
@@ -106,7 +101,7 @@ for (let i = 0; i < 7; i++) {
 }
 
 for (let i = 0; i < 2; i++) {
-      $('.portfolio-item__image').eq(i).hover(function(event){
+      $('.portfolio-item__block').eq(i).hover(function(event){
             $('.portfolio-item__description').eq(i).toggleClass('portfolio-item__description_active');
             $('.portfolio-item__click').eq(i).toggleClass('portfolio-item__click_active');
       });
