@@ -82,3 +82,10 @@ img{
      -webkit-animation-iteration-count: 1;
      animation-iteration-count: 1;
   }  
+  .progress-line{
+    z-index: 100;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    position: fixed;
+}
