@@ -51,7 +51,7 @@ $(window).bind('scroll', function() {
       var windowTop = $(this).scrollTop();
       if (windowTop > menuTop) {
             $('.menu').css({'position':'fixed', 'top':'0'});
-            $('.main').css({'padding-top':'74px'});
+            $('.main').css({'padding-top':'174px'});
             if (windowTop-menuTop > 50){
                   $('.menu').css({'padding-top':'8px', 'padding-bottom':'8px'});
             }
@@ -61,11 +61,11 @@ $(window).bind('scroll', function() {
       }
       else{
             $('.menu').css({'position':'relative'});
-            $('.main').css({'padding-top':'10px'});
+            $('.main').css({'padding-top':'100px'});
       }
       if (windowTop > navTop) {
             $('.navigation').css({'position':'fixed', 'top':'0'});
-            $('.main').css({'padding-top':'74px'});
+            $('.main').css({'padding-top':'174px'});
             if (windowTop-navTop > 50){
                   $('.navigation-top').css({'padding-top':'8px', 'padding-bottom':'8px'});
             }
@@ -80,7 +80,7 @@ $(window).bind('scroll', function() {
       }
       else{
             $('.navigation').css({'position':'relative'});
-            $('.main').css({'padding-top':'10px'});
+            $('.main').css({'padding-top':'100px'});
       }
 
       var windowTop = $(this).scrollTop();

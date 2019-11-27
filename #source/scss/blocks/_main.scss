@@ -1,5 +1,6 @@
-.main{
+.main{  
     background-color: $bg-secondary;
+    padding: 100px 0;
     &-block{
         display: flex;
         flex-direction: column;
@@ -19,13 +20,13 @@
                     animation: 5s 0s linear infinite translate-left;
                 }
                 .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
-                    margin-right: 30px;
-                    width: 115px;
+                    margin-right: 60px;
+                    width: 230px;
                     animation: 5s 1s linear infinite translate-left;
                 }
                 .main-logo-line:nth-child(3){
-                    margin-right: 50px;
-                    width: 125px;
+                    margin-right: 100px;
+                    width: 250px;
                     animation: 5s 2s linear infinite translate-left;
                 }
             }
@@ -34,29 +35,29 @@
                     animation: 5s 0s linear infinite translate-right;
                 }
                 .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
-                    margin-left: 30px;
-                    width: 115px;
+                    margin-left: 60px;
+                    width: 230px;
                     animation: 5s 1s linear infinite translate-right;
                 }
                 .main-logo-line:nth-child(3){
-                    margin-left: 50px;
-                    width: 125px;
+                    margin-left: 100px;
+                    width: 250px;
                     animation: 5s 2s linear infinite translate-right;
                 }
             }
         }
         &-line{
-            width: 100px;
-            height: 4px;
+            width: 200px;
+            height: 5px;
             background-color: #000000;
-            margin: 7px 0;
+            margin: 10px 0;
         }
         &-img{
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 200px;
-            height: 200px;
+            width: 350px;
+            height: 350px;
             background: linear-gradient(-90deg, rgb(0, 0, 0), rgb(0, 0, 0) 15%, #f6f7f8 15%, #f6f7f8 85%,  rgb(0, 0, 0) 85%); 
             border-radius: 50%;
             animation: 10s linear infinite rotate-right;
@@ -65,8 +66,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 192px;
-            height: 192px;
+            width: 340px;
+            height: 340px;
             background-color: #f6f7f8;
             border-radius: 50%;
         }
@@ -74,8 +75,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 188px;
-            height: 188px;
+            width: 336px;
+            height: 336px;
             background: linear-gradient(-90deg, #f6f7f8, #f6f7f8 15%, #000000 15%, #000000 85%,  #f6f7f8 85%); 
             border-radius: 50%;
             animation: 10s linear infinite rotate-left;
@@ -84,11 +85,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 180px;
-            height: 180px;
+            width: 326px;
+            height: 326px;
             background-color: #f6f7f8;
             border-radius: 50%;
-            font-size: 64px;
+            font-size: 120px;
             font-family: Roboto;
             text-transform: uppercase;
             letter-spacing: -1.15px;
@@ -97,38 +98,111 @@
     }
     &-name{
         margin-top: 20px;
-        font-size: 20px;
+        font-size: 50px;
         text-transform: uppercase;
-        letter-spacing: 12px;
-        text-indent: 12px;
-        color: #39383a;
+        letter-spacing: 15px;
+        text-indent: 15px;
+        color: #000000;
         font-family: Roboto;
-        font-weight: 500;
     }
     &-description{
-        margin-top: 10px;
+        font-size: 20px;
+        margin-top: 0;
         letter-spacing: 4px;
         text-indent: 4px;
         position: relative;
+        color: #000000;        
         &:before{
             content: '';
             height: 1px;
-            width: 158px;
-            background-color: rgba($light, 0.7);
+            width: 351px;
+            background-color: black;
             display: block;
             position: absolute;
             top: 50%;
-            left: -157px;
+            left: -350px;
         }
         &:after{
             content: '';
             height: 1px;
-            width: 158px;
-            background-color: rgba($light, 0.7);
+            width: 351px;
+            background-color: black;
             display: block;
             position: absolute;
             top: 50%;
-            right: -157px;
+            right: -350px;
+        }
+    }
+}
+
+@media (max-width: 1099px){
+    .main{
+        &-logo{
+            &-lines{
+                &__left{ 
+                    .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
+                        margin-right: 30px;
+                        width: 95px;
+                    }
+                    .main-logo-line:nth-child(3){
+                        margin-right: 50px;
+                        width: 110px;
+                    }
+                }
+                &__right{
+                    .main-logo-line:nth-child(2), .main-logo-line:nth-child(4){
+                        margin-left: 30px;
+                        width: 95px;
+                    }
+                    .main-logo-line:nth-child(3){
+                        margin-left: 50px;
+                        width: 110px;
+                    }
+                }
+            }
+            &-line{
+                width: 85px;
+                height: 3px;
+                margin: 6px 0;
+            }
+            &-img{
+                width: 200px;
+                height: 200px;
+            }
+            &-second{
+                width: 194px;
+                height: 194px;
+                
+            }
+            &-third{
+                width: 192px;
+                height: 192px;
+            }
+            &-fourth{
+                width: 186px;
+                height: 186px;
+                font-size: 64px;
+            }
+        }
+        &-name{
+            margin-top: 15px;
+            font-size: 20px;
+            letter-spacing: 10px;
+            text-indent: 10px;
+        }
+        &-description{
+            font-size: 12px;
+            margin-top: 5px;
+            letter-spacing: 2px;
+            text-indent: 2px;
+            &:before{
+                width: 159px;
+                left: -160px;
+            }
+            &:after{
+                width: 159px;
+                right: -160px;
+            }
         }
     }
 }
