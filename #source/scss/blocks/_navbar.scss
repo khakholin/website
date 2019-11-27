@@ -29,8 +29,8 @@
         flex-basis: 60%;
         display: flex;
         justify-content: space-around;
-        min-width: 500px;
-        max-width: 500px;
+        min-width: 550px;
+        max-width: 550px;
         &_phone{
             width: 100%;
         }
@@ -48,7 +48,7 @@
             display: block;
             position: absolute;
             top: 0;
-            right: -12px;
+            right: -14px;
         }
         &:hover:after{
             cursor: auto;
@@ -282,7 +282,7 @@
         &:before{
             content: '';
             height: 1px;
-            width: 78px;
+            width: 68px;
             background-color: black;
             display: block;
             position: absolute;
@@ -292,7 +292,7 @@
         &:after{
             content: '';
             height: 1px;
-            width: 78px;
+            width: 68px;
             background-color: black;
             display: block;
             position: absolute;
@@ -348,11 +348,11 @@
         }
         &__subtext{
             &:before{
-                width: 56px;
+                width: 46px;
                 top: 31px;
             }
             &:after{
-                width: 56px;
+                width: 46px;
                 top: 31px; 
             }
         }

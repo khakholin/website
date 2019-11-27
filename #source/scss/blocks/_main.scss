@@ -115,22 +115,22 @@
         &:before{
             content: '';
             height: 1px;
-            width: 351px;
+            width: 321px;
             background-color: black;
             display: block;
             position: absolute;
             top: 50%;
-            left: -350px;
+            left: -320px;
         }
         &:after{
             content: '';
             height: 1px;
-            width: 351px;
+            width: 321px;
             background-color: black;
             display: block;
             position: absolute;
             top: 50%;
-            right: -350px;
+            right: -320px;
         }
     }
 }
@@ -196,12 +196,12 @@
             letter-spacing: 2px;
             text-indent: 2px;
             &:before{
-                width: 159px;
-                left: -160px;
+                width: 143px;
+                left: -144px;
             }
             &:after{
-                width: 159px;
-                right: -160px;
+                width: 143px;
+                right: -144px;
             }
         }
     }
@@ -267,12 +267,12 @@
             letter-spacing: 2px;
             text-indent: 2px;
             &:before{
-                width: 128px;
-                left: -129px;
+                width: 112px;
+                left: -113px;
             }
             &:after{
-                width: 128px;
-                right: -129px;
+                width: 112px;
+                right: -113px;
             }
         }
     }
@@ -334,12 +334,12 @@
         &-description{
             font-size: 10px;
             &:before{
-                width: 90px;
-                left: -91px;
+                width: 75px;
+                left: -76px;
             }
             &:after{
-                width: 90px;
-                right: -91px;
+                width: 75px;
+                right: -76px;
             }
         }
     }

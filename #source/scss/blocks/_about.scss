@@ -2,7 +2,69 @@
     background-color: white;
     &-block{
         display: flex;
+        flex-direction: column;
+    }
+    &__line{
+        display: flex;
+        justify-content: center;
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+        width: 300px;
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: flex-start;
+        text-align: left;
+        width: 450px;
+        position: relative;
+        padding-left: 150px;
+        &:before{
+            position: absolute;
+            left: 68px;
+            top: 0;
+            content: '';
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            background-color: rgb(100, 0, 0);
+        }
+        &:after{
+            position: absolute;
+            left: 74px;
+            top: 14px;
+            content: '';
+            height: calc(100% - 14px);
+            width: 2px;
+            background-color: rgb(100, 0, 0);
+        }
+    }
+    &__date{
+        text-transform: uppercase;
+        font-weight: 700;
+        color: rgb(100, 0, 0);
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    &__title{
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 5px;
+        letter-spacing: 2px;
+    }
+    &__sub-title{
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    &__text{
+        font-size: 14px;
+        line-height: 1.6;
     }
 }
 .short-info{
@@ -76,7 +138,7 @@
 @media (max-width: 991px){ 
     .about{
         &-block{
-            max-width: 520px;
+            max-width: 750px;
             margin: auto;
             flex-direction: column;
         }
@@ -89,10 +151,37 @@
         }
     }
 }
-@media (max-width: 547px){ 
+@media (max-width: 750px){
     .about{
         &-block{
             align-items: center;
+        }
+        &__line{
+            display: block;
+        }
+        &__right{
+            padding: 0;
+        }
+        &__left{
+            width: 450px;
+            align-items: flex-start;
+            text-align: left;
+        }
+        &__right:before, &__right:after{
+            display: none;
+        } 
+        &__text{
+            margin-bottom: 40px;
+        }
+    }
+}
+@media (max-width: 547px){ 
+    .about{
+        &__right{
+            width: 300px;
+        }
+        &__left{
+            width: 300px;
         }
     }
     .experience{
