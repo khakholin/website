@@ -82,8 +82,7 @@ $(window).bind('scroll', function() {
             $('.navigation').css({'position':'relative'});
             $('.main').css({'padding-top':'100px'});
       }
-
-      var windowTop = $(this).scrollTop();
+      //progress-line
       if (windowTop != 0) {
           $('.progress-line').css({'width': getWidthPercent()}); 
       }
