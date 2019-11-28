@@ -51,8 +51,7 @@ $(window).bind('scroll', function() {
       var windowTop = $(this).scrollTop();
       if (windowTop > menuTop) {
             $('.menu').css({'position':'fixed', 'top':'0'});
-            $('.main').css({'padding-top':'174px'});
-            if (windowTop-menuTop > 50){
+            if (windowTop-menuTop > 74){
                   $('.menu').css({'padding-top':'8px', 'padding-bottom':'8px'});
             }
             else{
@@ -61,12 +60,11 @@ $(window).bind('scroll', function() {
       }
       else{
             $('.menu').css({'position':'relative'});
-            $('.main').css({'padding-top':'100px'});
       }
+
       if (windowTop > navTop) {
             $('.navigation').css({'position':'fixed', 'top':'0'});
-            $('.main').css({'padding-top':'174px'});
-            if (windowTop-navTop > 50){
+            if (windowTop-navTop > 74){
                   $('.navigation-top').css({'padding-top':'8px', 'padding-bottom':'8px'});
             }
             else{
@@ -80,7 +78,6 @@ $(window).bind('scroll', function() {
       }
       else{
             $('.navigation').css({'position':'relative'});
-            $('.main').css({'padding-top':'100px'});
       }
       //progress-line
       $('.progress-line').css({'width': getWidthPercent()}); 
